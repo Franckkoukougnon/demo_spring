@@ -20,4 +20,15 @@ public class RequestParamController {
         return items;
     }
 
+    @GetMapping("/bonjour")
+    public String multiPAram(@RequestParam String id, @RequestParam( required = false) String name){
+
+        if(name == null){
+            return "Bonjour " + id + ", mais ou est diantre name ?";
+
+        }
+        return "Bonjour "+ id +", quel beau temps pour "+ name;
+    }
+
+
 }
