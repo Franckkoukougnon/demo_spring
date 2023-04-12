@@ -31,6 +31,16 @@ public class ItemController {
         return reverseWord.toString();
     }
 
+    @GetMapping("/boolean")
+    public String boolString(@RequestParam boolean bar){
+        if(bar){
+            return " comment tu vas ? ";
+        } else {
+            return " on ne se parle pas ";
+        }
+
+    }
+
 
     @GetMapping("/page1")
     public String pages1(){
