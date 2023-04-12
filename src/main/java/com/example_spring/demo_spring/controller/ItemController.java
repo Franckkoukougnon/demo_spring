@@ -17,11 +17,14 @@ public class ItemController {
         System.out.println("Welcome Home");
     }
 
+    // cette fonction retourne le mot directement dans la console
     @GetMapping("/afficherMot")
     public String afficherMot(@RequestParam(defaultValue = "test") String mot) {
         System.out.println(mot);
         return mot;
     }
+
+    // cette methode reverse le mot mis en parametre et l'affiche
     @GetMapping("/reverse")
     public String reverse(@RequestParam(defaultValue =" Simplon" ) String mot){
         StringBuilder reverseWord = new StringBuilder(mot).reverse();
