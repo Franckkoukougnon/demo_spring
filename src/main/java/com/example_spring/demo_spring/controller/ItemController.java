@@ -31,6 +31,8 @@ public class ItemController {
         return reverseWord.toString();
     }
 
+
+
     @GetMapping("/boolean")
     public String boolString(@RequestParam boolean bar){
         if(bar){
@@ -56,6 +58,9 @@ public class ItemController {
 
         return  person;
     }
+
+
+
 
     @GetMapping("/list")
     public List<String> listItem(){
